@@ -60,6 +60,32 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
  Typical Steps in a Solution:
 </h2>
 
+- Download the Dataset
+
+   - Install required libraries
+   - Download data from Kaggle
+   - View dataset files
+   - Load training set with Pandas
+   - Load test set with Pandas
+
+
+
+
+- Loading Training Set
+
+    Loading the entire dataset into Pandas is going to be slow, so we can use the following optimizations:
+
+     - Ignore the `key` column
+     - Parse pickup datetime while loading data
+     - Specify data types for other columns
+     - `float32` for geo coordinates
+     - `float32` for fare amount
+     - `uint8` for passenger count
+     - Work with a 1% sample of the data (~500k rows)
+
+
+
+
 - Data Cleaning: Remove or correct invalid coordinates, negative fares, unrealistic passenger counts, etc.
 
 - Feature Engineering:
