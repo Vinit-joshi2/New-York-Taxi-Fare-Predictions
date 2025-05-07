@@ -247,6 +247,31 @@ class MeanRegressor():
     return np.full(inputs.shape[0] , self.mean)
   ```
 
+  ```
+mean_model = MeanRegressor()
+  ```
+
+  ```
+mean_model.fit(train_inputs , train_target)
+  ```
+
+  ```
+train_preds = mean_model.predict(train_inputs)
+train_preds
+  ```
+
+  ```
+val_preds = mean_model.predict(val_inputs)
+val_preds
+  ```
+
+The evaluation metric for this competition is the root mean-squared error or RMSE. RMSE measures the difference between the predictions of a model, and the corresponding ground truth. A large RMSE is equivalent to a large average error, so smaller values of RMSE are better. One nice property of RMSE is that the error is given in the units being measured, so you can tell very directly how incorrect the model might be on unseen data.
+
+RMSE is given by:
+
+RMSE=1n∑i=√1n(y^i−yi)2
+
+
    
 
 
