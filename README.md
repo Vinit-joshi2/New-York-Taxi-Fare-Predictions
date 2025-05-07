@@ -372,7 +372,7 @@ def haversine_np(lon1 , lat1 , lon2 , lat2):
     
      - Validation RMSE: 3.9976
     
-    The Random Forest model achieved a significantly lower RMSE than Ridge Regression . The gap between training and validation RMSE is small, indicating good generalization with Minmum overfitting.
+     The Random Forest model achieved a significantly lower RMSE than Ridge Regression . The gap between training and validation RMSE is small, indicating good generalization with Minmum overfitting.
     
        
    - Gradient Boosting
