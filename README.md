@@ -238,12 +238,13 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
 
     ```
        import numpy as np
-class MeanRegressor():
-  def fit(self , inputs , targets):
-    self.mean = targets.mean()
+       class MeanRegressor():
+        def fit(self , inputs , targets):
+          self.mean = targets.mean()
+     
+        def predict(self , inputs):
+          return np.full(inputs.shape[0] , self.mean)
 
-  def predict(self , inputs):
-    return np.full(inputs.shape[0] , self.mean)
     ```
   
 
