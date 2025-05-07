@@ -334,6 +334,21 @@ However, now we have a baseline that our other models should ideally beat.
   We can use the haversine distance:
  <a href = "https://en.wikipedia.org/wiki/Haversine_formula"> haversine distance  </a>
 
+  ```
+def haversine_np(lon1 , lat1 , lon2 , lat2):
+
+  lon1 , lat1 , lon2 , lat2 = map(np.radians , [lon1 , lat1 , lon2 , lat2])
+
+  dlon = lon2 - lon1
+  dlat = lat2 - lat1
+  a = np.sin(dlat/2.0)**2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon/2.0)**2
+
+  c = 2 * np.arcsin(np.sqrt(a))
+  km = 6367 * c
+  return km
+  ```
+ 
+
 
 
 
