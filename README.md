@@ -216,7 +216,19 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
    
     The month with the highest average fare is June, followed closely by May and April. This trend may be influenced by increased travel, tourism, and warmer weather activities during late spring and early summer.
 
-       
+
+
+**4 Split Training & Validation Set**
+
+  We'll set aside 20% of the training data as the validation set, to evaluate the models we train on previously unseen data.
+  Since the test set and training set have the same date ranges, we can pick a random 20% fraction.
+
+  ```
+   len(train_df) , len(val_df)
+  ```
+  Training data has a 443528 rows
+  validation data has a  110882 rows
+  
 
    
 
