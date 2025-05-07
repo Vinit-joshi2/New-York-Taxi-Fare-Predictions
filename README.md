@@ -244,8 +244,7 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
      
         def predict(self , inputs):
           return np.full(inputs.shape[0] , self.mean)
-
-    ```
+     ```
   
 
    
