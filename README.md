@@ -124,5 +124,16 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
 
    - With the best value of the first hyperparameter, tune the next most impactful hyperparameter
 
+<h2>
+ Project OverView:
+</h2>
+
+- 1. Install Dependencies
+
+     ```
+      !pip install numpy pandas matplotlib seaborn opendatasets scikit-learn xgboost --quiet
+     ```
+
+
 
 
