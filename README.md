@@ -124,6 +124,8 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
 
    - With the best value of the first hyperparameter, tune the next most impactful hyperparameter
 
+<img src = "https://github.com/Vinit-joshi2/New-York-Taxi-Fare-Predictions/blob/main/NTC%20Taxi.png">
+
 <h2>
  Project OverView:
 </h2>
