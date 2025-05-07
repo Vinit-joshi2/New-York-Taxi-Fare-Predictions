@@ -271,7 +271,59 @@ RMSE is given by:
 
 RMSE=1n∑i=√1n(y^i−yi)2
 
+  ```
+from sklearn.metrics import mean_squared_error , root_mean_squared_error
+train_rmse = root_mean_squared_error(train_target, train_preds)
+  ```
 
+  ```
+train_rmse
+  ```
+
+  ```
+val_rmse = root_mean_squared_error(val_target , val_preds )
+val_rmse
+  ```
+
+Train & Evaluate Baseline Model
+
+We'll traina linear regression model as our baseline, which tries to express the target as a weighted sum of the inputs.
+
+  ```
+from sklearn.linear_model import LinearRegression
+  ```
+  ```
+linreg_model = LinearRegression()
+  ```
+
+  ```
+linreg_model.fit(train_inputs , train_target)
+  ```
+
+  ```
+train_preds = linreg_model.predict(train_inputs)
+train_preds
+  ```
+
+  ```
+val_preds = linreg_model.predict(val_inputs)
+val_preds
+  ```
+
+  ```
+train_rmse = root_mean_squared_error(train_target , train_preds)
+train_rmse
+  ```
+  ```
+val_rmse = root_mean_squared_error(val_target , val_preds)
+val_rmse
+  ```
+
+The linear regression model is off by $9.79, which isn't much better than simply predicting the average.
+
+This is mainly because the training data  is not in a format that's useful for the model, and we're not using one of the most important columns: pickup date & time.
+
+However, now we have a baseline that our other models should ideally beat.
    
 
 
