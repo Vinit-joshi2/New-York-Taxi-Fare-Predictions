@@ -348,7 +348,7 @@ def haversine_np(lon1 , lat1 , lon2 , lat2):
   return km
   ```
  
-**7 Train & Evaluate Different Models**
+**8 Train & Evaluate Different Models**
 
    - Ridge Regression
 
@@ -415,6 +415,39 @@ def haversine_np(lon1 , lat1 , lon2 , lat2):
 **Best Model: XGBoost continues to outperform others in terms of validation RMSE.**
 
 
+**9 Tune Hyperparmeters**
 
+
+
+  We'll train parameters for the XGBoost model. Here’s a strategy for tuning hyperparameters:
+
+   - Tune the most important/impactful hyperparameter first e.g. n_estimators , max_depth m learning_rate
+
+   - With the best value of the first hyperparameter, tune the next most impactful hyperparameter
+
+```
+ xgb_model_final = XGBRegressor(objective='reg:squarederror', n_jobs=-1, random_state=42,
+                               n_estimators=500, max_depth=5, learning_rate=0.1,
+                               subsample=0.8, colsample_bytree=0.8)
+```
+
+**Tuned XGBoost Regressor**
+
+Performance:
+
+- Training RMSE: 3.2294
+
+- Validation RMSE: 3.8769
+
+This tuned XGBoost model outperformed all previous models, achieving the lowest validation RMSE of 3.8769. By adjusting key hyperparameters like max_depth, n_estimators, subsample, and colsample_bytree, we got a good balance model between bias and variance — reducing overfitting 
+
+
+| Model               | Training RMSE | Validation RMSE |
+| ------------------- | ------------- | --------------- |
+| Ridge Regression    | 5.1092        | 5.0607          |
+| Decision Tree       | 5.1172        | 5.2848          |
+| Random Forest       | 3.5764        | 3.9976          |
+| XGBoost (Initial)   | 3.1619        | 3.9022          |
+| **XGBoost (Tuned)** | 3.2294        | **3.8769**      |
 
 
