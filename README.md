@@ -352,42 +352,67 @@ def haversine_np(lon1 , lat1 , lon2 , lat2):
 
    - Ridge Regression
 
+      Ridge Regression, a regularized linear regression model that helps reduce overfitting by penalizing large coefficients. It’s especially useful when dealing with multicollinearity in the features.
 
-     **Let's define fucntion to evalute model**
+     After training the model, we evaluated its performance using Root Mean Squared Error (RMSE) on both the training and validation sets.
 
-     ```
-       def evaluate(model):
-     train_preds = model.predict(train_inputs)
-     train_rmse = root_mean_squared_error(train_target, train_preds)
-     val_preds = model.predict(val_inputs)
-     val_rmse = root_mean_squared_error(val_target, val_preds)
-     return train_rmse, val_rmse, train_preds, val_preds
-     ```
-
-
-      ```
-       from sklearn.linear_model import Ridge
-      ```
-      ```
-       model1 = Ridge(random_state=42 , alpha=0.9)
-      ```
-      ```
-      %%time
-      model1.fit(train_inputs , train_target)
-      ```
-      ```
-        evaluate(model1)
-      ```
-      ```
-        evaluate(model1)
-      ```
-
-
-
+     - Training RMSE: 5.10927939051802
+    
+     - Validation RMSE: 5.060686737738835
+    
+     The training and validation RMSE scores are quite close, suggesting that the Ridge Regression model is not overfitting and generalizes well to unseen data.
      
    - Random Forests
+
+      A Random Forest Regressor — an ensemble method that builds multiple Decision Trees and averages their predictions.
+
+     We then evaluated its performance using Root Mean Squared Error (RMSE):
+
+     - Training RMSE: 3.5764
+    
+     - Validation RMSE: 3.9976
+    
+    The Random Forest model achieved a significantly lower RMSE than Ridge Regression . The gap between training and validation RMSE is small, indicating good generalization with Minmum overfitting.
+    
+       
    - Gradient Boosting
+
+      To push the model performance further, we used XGBoost (Extreme Gradient Boosting)
+
+     Performance evaluation using Root Mean Squared Error (RMSE):
+
+      - Training RMSE: 3.1619
+    
+      - Validation RMSE: 3.9022
+
+      XGBoost achieved the lowest validation RMSE among all models tested, indicating it was the most effective in capturing complex patterns in the data. Although the training RMSE is lower than the validation RMSE , the gap remains reasonable — showing that the model generalizes well and is not  overfitting.
+        
+
+
+
+
    - Decision Tree
+
+     we trained a Decision Tree Regressor, which can model non-linear relationships by splitting data based on feature thresholds.
+
+     Performance:
+
+     - Training RMSE: 5.1172
+     
+     - Validation RMSE: 5.2848
+    
+   The Decision Tree showed a slightly higher validation RMSE , indicating limited performance at the chosen max_depth
+
+
+
+| Model            | Training RMSE | Validation RMSE |
+| ---------------- | ------------- | --------------- |
+| Ridge Regression | 5.1092        | 5.0607          |
+| Decision Tree    | 5.1172        | 5.2848          |
+| Random Forest    | 3.5764        | 3.9976          |
+| XGBoost          | 3.1619        | 3.9022          |
+
+**Best Model: XGBoost continues to outperform others in terms of validation RMSE.**
 
 
 
