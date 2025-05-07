@@ -130,9 +130,8 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
 
  **1. Install Dependencies**
 <pre>
-     ```
+
       !pip install numpy pandas matplotlib seaborn opendatasets scikit-learn xgboost --quiet
-    ```
 </pre>
 
 
