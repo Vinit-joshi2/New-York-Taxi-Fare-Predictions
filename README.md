@@ -1,6 +1,6 @@
 # New York City Taxi Fare Prediction
 
-<h1>problem Statement:</h1>
+<h1>Problem Statement:</h1>
 <b>
 The New York City Taxi Fare Prediction challenge is a regression problem where the goal is to predict the fare amount (in USD) that a passenger will have to pay for a taxi ride in New York City, based on certain information available at the start of the ride.
 </b>
@@ -56,6 +56,29 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
     - Traffic patterns, holidays, weather (if available).
 
 
+<h2>
+ Typical Steps in a Solution:
+</h2>
+- Data Cleaning: Remove or correct invalid coordinates, negative fares, unrealistic passenger counts, etc.
 
+- Feature Engineering:
+
+   - Add distance between pickup & drop
+
+   - Extract parts of date (weekday, hour, ywar , month , days).
+
+
+
+- Modeling: Use machine learning models like:
+
+   - Ridge Regression
+
+   - Random Forest
+
+   - Gradient Boosting Machines (like XGBoost)
+
+   - Decision Tree
+
+- Evaluation: Metric usually used is Root Mean Squared Error (RMSE).
 
 
