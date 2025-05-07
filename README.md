@@ -169,21 +169,54 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
 
        We analyzed the pickup_datetime_weekday column. The counts for each day (where 0 = Monday and 6 = Sunday) are as follows:
 
-        Friday (4): 66,613 rides
+        - Friday (4): 66,613 rides
         
-        Saturday (5): 65,530 rides
+        - Saturday (5): 65,530 rides
         
-        Thursday (3): 64,887 rides
+        - Thursday (3): 64,887 rides
         
-        Wednesday (2): 62,539 rides
+        - Wednesday (2): 62,539 rides
         
-        Tuesday (1): 60,576 rides
+        - Tuesday (1): 60,576 rides
         
-        Sunday (6): 56,669 rides
+        - Sunday (6): 56,669 rides
         
-        Monday (0): 55,649 rides
+        - Monday (0): 55,649 rides
 
      Friday is the busiest day for taxi pickups, followed closely by Saturday and Thursday. This suggests that taxi demand increases towards the end of the workweek
+
+
+  - Q In which month are fares the highest?
+
+      Here are the Total fare amounts per month (where 1 = January, 12 = December):
+
+      - June (6): $474,170.25
+
+      - May (5): $452,513.34
+      
+      - April (4): $447,959.50
+      
+      - July (7): $445,795.69
+      
+      - February (2): $412,085.47
+      
+      - November (11): $405,111.59
+      
+      - March (3): $393,834.31
+      
+      - December (12): $389,207.75
+      
+      - October (10): $388,029.69
+      
+      - September (9): $377,153.19
+      
+      - August (8): $364,826.38
+      
+      - January (1): $351,812.97
+   
+    The month with the highest average fare is June, followed closely by May and April. This trend may be influenced by increased travel, tourism, and warmer weather activities during late spring and early summer.
+
+       
 
    
 
