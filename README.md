@@ -59,6 +59,7 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
 <h2>
  Typical Steps in a Solution:
 </h2>
+
 - Data Cleaning: Remove or correct invalid coordinates, negative fares, unrealistic passenger counts, etc.
 
 - Feature Engineering:
