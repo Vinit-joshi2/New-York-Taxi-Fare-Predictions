@@ -236,16 +236,16 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
   
    - Let's create a simple model that always predicts the average.
 
-    ```
-       import numpy as np
-       class MeanRegressor():
-        def fit(self , inputs , targets):
-          self.mean = targets.mean()
-     
-        def predict(self , inputs):
-          return np.full(inputs.shape[0] , self.mean)
-     ```
-  
+ 
+  ```
+   import numpy as np
+class MeanRegressor():
+  def fit(self , inputs , targets):
+    self.mean = targets.mean()
+
+  def predict(self , inputs):
+    return np.full(inputs.shape[0] , self.mean)
+  ```
 
    
 
