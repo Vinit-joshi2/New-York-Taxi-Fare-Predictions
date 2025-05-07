@@ -285,7 +285,7 @@ val_rmse = root_mean_squared_error(val_target , val_preds )
 val_rmse
   ```
 
-Train & Evaluate Baseline Model
+**6.Train & Evaluate Baseline Model**
 
 We'll traina linear regression model as our baseline, which tries to express the target as a weighted sum of the inputs.
 
@@ -327,7 +327,7 @@ However, now we have a baseline that our other models should ideally beat.
    
 
 
-**6 Feature Engineering**
+**7 Feature Engineering**
 
   **Add Distance Between Pickup and Drop**
 
@@ -348,6 +348,46 @@ def haversine_np(lon1 , lat1 , lon2 , lat2):
   return km
   ```
  
+**7 Train & Evaluate Different Models**
+
+   - Ridge Regression
+
+
+     **Let's define fucntion to evalute model**
+
+     ```
+       def evaluate(model):
+     train_preds = model.predict(train_inputs)
+     train_rmse = root_mean_squared_error(train_target, train_preds)
+     val_preds = model.predict(val_inputs)
+     val_rmse = root_mean_squared_error(val_target, val_preds)
+     return train_rmse, val_rmse, train_preds, val_preds
+     ```
+
+
+      ```
+       from sklearn.linear_model import Ridge
+      ```
+      ```
+       model1 = Ridge(random_state=42 , alpha=0.9)
+      ```
+      ```
+      %%time
+      model1.fit(train_inputs , train_target)
+      ```
+      ```
+        evaluate(model1)
+      ```
+      ```
+        evaluate(model1)
+      ```
+
+
+
+     
+   - Random Forests
+   - Gradient Boosting
+   - Decision Tree
 
 
 
