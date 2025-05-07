@@ -150,4 +150,45 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
    We may need to deal with outliers and data entry errors before we train our model.
 
 
+   Some observations about the test set:
+
+   - 9914 rows of data
+   - No missing values
+   - No obvious data entry errors
+   - 1 to 6 passengers (we can limit training data to this range)
+   - Latitudes lie between 40 and 42
+   - Longitudes lie between -75 and -72
+   - Pickup dates range from Jan 1st 2009 to Jun  30th 2015 (same as training set)
+
+   We can use the ranges of the test set to drop outliers/invalid data from the training set.
+
+
+**3. Exploratory Data Analysis and Visualization**
+
+   - Q What is the busiest day of the week?
+
+       We analyzed the pickup_datetime_weekday column. The counts for each day (where 0 = Monday and 6 = Sunday) are as follows:
+
+        Friday (4): 66,613 rides
+        
+        Saturday (5): 65,530 rides
+        
+        Thursday (3): 64,887 rides
+        
+        Wednesday (2): 62,539 rides
+        
+        Tuesday (1): 60,576 rides
+        
+        Sunday (6): 56,669 rides
+        
+        Monday (0): 55,649 rides
+
+     Friday is the busiest day for taxi pickups, followed closely by Saturday and Thursday. This suggests that taxi demand increases towards the end of the workweek
+
+   
+
+
+
+
+
 
