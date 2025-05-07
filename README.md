@@ -226,8 +226,25 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
   ```
    len(train_df) , len(val_df)
   ```
-  Training data has a 443528 rows
+  Training data has a 443528 rows and 
   validation data has a  110882 rows
+
+
+**5 Train Baseline Models**
+
+   - Train & Evaluate Hardcoded Model
+  
+   - Let's create a simple model that always predicts the average.
+
+    ```
+       import numpy as np
+class MeanRegressor():
+  def fit(self , inputs , targets):
+    self.mean = targets.mean()
+
+  def predict(self , inputs):
+    return np.full(inputs.shape[0] , self.mean)
+    ```
   
 
    
