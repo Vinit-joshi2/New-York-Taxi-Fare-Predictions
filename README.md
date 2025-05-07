@@ -116,4 +116,13 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
 
 - Evaluation: Metric usually used is Root Mean Squared Error (RMSE).
 
+- Tune Hyperparmeters
+
+    We'll train parameters for the XGBoost model. Here’s a strategy for tuning hyperparameters:
+
+   - Tune the most important/impactful hyperparameter first e.g. n_estimators , max_depth m learning_rate
+
+   - With the best value of the first hyperparameter, tune the next most impactful hyperparameter
+
+
 
