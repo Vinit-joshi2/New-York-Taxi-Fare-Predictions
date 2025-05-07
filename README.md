@@ -105,15 +105,14 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
 
 
 
-- Modeling: Use machine learning models like:
+- Train & Evaluate Different Models
 
-   - Ridge Regression
+    We'll train each of the following & submit predictions to Kaggle:
 
-   - Random Forest
-
-   - Gradient Boosting Machines (like XGBoost)
-
-   - Decision Tree
+    - Ridge Regression
+    - Random Forests
+    - Gradient Boosting
+    - Decision Tree
 
 - Evaluation: Metric usually used is Root Mean Squared Error (RMSE).
 
