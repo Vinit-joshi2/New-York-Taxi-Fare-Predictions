@@ -135,5 +135,19 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
 ```
 
 
+**2. Explore the Dataset**
+
+   Observations about training data:
+
+   - 550k+ rows, as expected
+   - No missing data (in the sample)
+   - `fare_amount` ranges from \$-52.0 to \$499.0
+   - `passenger_count` ranges from 0 to 208
+   - There seem to be some errors in the latitude & longitude values
+   - Dates range from 1st Jan 2009 to 30th June 2015
+   - The dataset takes up ~19 MB of space in the RAM
+
+   We may need to deal with outliers and data entry errors before we train our model.
+
 
 
