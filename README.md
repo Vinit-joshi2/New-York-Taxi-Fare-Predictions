@@ -83,7 +83,16 @@ Dataset Link: https://www.kaggle.com/c/new-york-city-taxi-fare-prediction
      - `uint8` for passenger count
      - Work with a 1% sample of the data (~500k rows)
 
+- Exploratory Data Analysis and Visualization
 
+ - Prepare Dataset for Training
+
+   - Split Training & Validation Set
+   - Fill/Remove Missing Values
+   - Extract Inputs & Outputs
+     - Training
+     - Validation
+     - Test
 
 
 - Data Cleaning: Remove or correct invalid coordinates, negative fares, unrealistic passenger counts, etc.
