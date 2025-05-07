@@ -265,7 +265,7 @@ val_preds = mean_model.predict(val_inputs)
 val_preds
   ```
 
-The evaluation metric for this competition is the root mean-squared error or RMSE. RMSE measures the difference between the predictions of a model, and the corresponding ground truth. A large RMSE is equivalent to a large average error, so smaller values of RMSE are better. One nice property of RMSE is that the error is given in the units being measured, so you can tell very directly how incorrect the model might be on unseen data.
+The evaluation metric for this competition is the root mean-squared error or RMSE. RMSE measures the difference between the predictions of a model, and the corresponding ground truth. A large RMSE is equivalent to a large average error, so smaller values of RMSE are better.
 
 RMSE is given by:
 
@@ -326,6 +326,13 @@ This is mainly because the training data  is not in a format that's useful for t
 However, now we have a baseline that our other models should ideally beat.
    
 
+
+**6 Feature Engineering**
+
+  **Add Distance Between Pickup and Drop**
+
+  We can use the haversine distance:
+ <a href = "https://en.wikipedia.org/wiki/Haversine_formula"> haversine distance  </a>
 
 
 
